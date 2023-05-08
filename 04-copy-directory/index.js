@@ -3,11 +3,11 @@ const path = require('path');
 const pathToFolder = path.join(__dirname, 'files');
 const pathToFolderCopy = path.join(__dirname, 'files-copy');
 
-fs.mkdir(pathToFolderCopy, {recursive: true}, (error) => {
+fs.mkdir(pathToFolderCopy, { recursive: true }, (error) => {
   if (error) return console.error(error.message);
 });
 
-fs.readdir(pathToFolder, {withFileTypes: true}, function (error, files) {
+fs.readdir(pathToFolder, { withFileTypes: true }, function (error, files) {
   if (error) return console.error(error.message);
 
   files.forEach((file) => {
